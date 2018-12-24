@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style media="screen">
+      .test{
+        height:100%;
+        transition: height 1s;
+        background: red;
+        overflow: hidden;
+      }
+      .hide{
+        height:0px;
+      }
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <button type="button" name="button">Make a request to page </button>
+
+
+    </div>
+  </body>
+<script type="text/javascript">
+  $("button").on("click", function(event){
+
+    $.post("http://localhost:4000/sendcode", {"email":"sekhoniqbal@yahoo.com"}, function(response){console.log(response)});
+
+  });
+
+  function toggleDisplay(){
+  var hidden =  document.querySelector(".test").classList.contains("hide");
+  if(hidden) $(".test").removeClass('hide');
+  else $(".test").addClass('hide');
+  }
+</script>
+</html>

@@ -1,0 +1,114 @@
+.warning{text-align: center;}
+
+  .page2, #allpages{
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.btn {
+  margin: 4px;
+}
+
+.warning{
+  color:white;
+    position: fixed;
+    width:100%;
+    height:100%;
+    left:0px;
+    top:0px;
+    padding-top:25vh;
+    background: rgba(0,0,0,0.9);
+    z-index:1;
+}
+
+
+
+.page1{
+  max-width: 800px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:"storylist words";
+}
+
+#words > div{border-radius: 5px; padding:5px; margin-bottom: 10px;
+
+}
+#storylist {grid-area: storylist;}
+#wordlist{ background: #ffe6e6; ;}
+#learnedwordlist{background: #ddffcc;}
+#deletedwordlist{background: #e6e6e6;}
+
+.hide {  display: none;}
+.newword{  background: #ffb3b3;}
+.learnt{  background: #b9ff99;}
+.marked {background: #ffff99;}
+.deleted {background: #cccccc;}
+
+span {
+  padding: 0px 1px;
+  border-radius: 5px;
+}
+
+.update{
+  padding:3px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.black{
+  background: black;
+}
+
+li{position: relative;}
+
+
+
+.cooltip{
+  background: grey;
+  width: 300px;
+  border-radius: 5px;
+  max-height: 140px;
+  transition: max-height 1s 0s;
+  overflow: hidden;
+}
+
+.maxheightzero {
+  max-height: 0px;
+  padding: 0px;
+  margin:0px;
+  box-sizing:border-box;
+  overflow: hidden;
+}
+
+ol{display: inline-block;
+  padding-left: 20px;
+}
+
+#infobox{
+  position: -webkit-sticky;
+  position: sticky;
+  width:375px;
+  border-radius: 5px;
+  background: #ddd;
+  margin: 0 auto;
+top:40px;
+left:0px;
+}
+
+.close::after{
+  content: "X";
+
+  background:grey;
+  width:20px;
+  height:20px;
+  border-radius: 5px;
+  position: absolute;
+border: 2px solid black;
+  top:3px;
+  right: 3px;
+  font-size: 16px
+
+
+}

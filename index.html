@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Stories</title>
+  </head>
+  <body id="app">
+    <div id="allpages">
+      <button class="btn btn-info" id="makefontbig">Increase Font Size</button>
+      <button class="btn btn-info" id="makefontsmall">Decrease Font Size</button>
+      <button  id="cleardata1" class="btn btn-warning">Clear all local data</button>
+      <div  id="modal" class="warning hide">Are you sure you want to delete all the local data. you will lose all your saved words and settings?<br>
+        <button id="cleardatareal" class="btn btn-danger" onclick="localStorage.clear();window.location.reload()">Yes</button>
+        <button  id="goback" class="btn btn-success" type="button" name="button">No, Go Back</button>
+      </div>
+    </div>
+    <div class="page1">
+      <div id="storylist">
+        <h2>Story List</h2>
+        <input id="searchStory" placeholder="search Story name">
+        <div>
+          <ol></ol>
+        </div>
+      </div>
+      <div id=words>
+          <div id="wordlist">
+            <h2>My Words</h2>
+            <ol></ol>
+          </div>
+          <div id="learnedwordlist">
+            <h2>Words I learned</h2>
+            <ol></ol>
+          </div>
+          <div id="deletedwordlist">
+            <h2>deletedwords</h2>
+            <ol></ol>
+          </div>
+      </div>
+    </div>
+
+    <div class="page2">
+      <div id="infobox">
+
+      </div>
+      <div id="story">
+        <h1 id="heading"></h1>
+        <div id="body"></div>
+        <div style="text-align:center;">
+        <button id="goback" class="btn btn-primary">go back</button>
+        <button id="addword" class="btn btn-success">Add to My Word</button>
+        <button id="markasread" class="btn btn-success">Mark Story as Read</button>
+        </div>
+        <div id="currentwords">
+          <h2>My words From current Story</h2>
+          <ol></ol>
+        </div>
+
+      </div>
+    </div>
+
+
+  </body>
+</html>
